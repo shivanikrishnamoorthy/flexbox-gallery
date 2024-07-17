@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Photo Gallery</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.03);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover .caption {
+            transform: translateY(0);
+        }
+
+        .gallery-item a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            text-decoration: none;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery">
+        <div class="gallery-item">
+            <a href="https://example.com/image1">
+                <img src="https://picsum.photos/500/500?random=1" alt="Random Image 1">
+                <div class="caption">Beautiful Landscape</div>
+            </a>
+        </div>
+        <div class="gallery-item">
+            <a href="https://example.com/image2">
+                <img src="https://picsum.photos/500/500?random=2" alt="Random Image 2">
+                <div class="caption">City Skyline</div>
+            </a>
+        </div>
+        <div class="gallery-item">
+            <a href="https://example.com/image3">
+                <img src="https://picsum.photos/500/500?random=3" alt="Random Image 3">
+                <div class="caption">Mountain View</div>
+            </a>
+        </div>
+        <div class="gallery-item">
+            <a href="https://example.com/image4">
+                <img src="https://picsum.photos/500/500?random=4" alt="Random Image 4">
+                <div class="caption">Ocean Sunset</div>
+            </a>
+        </div>
+        <div class="gallery-item">
+            <a href="https://example.com/image5">
+                <img src="https://picsum.photos/500/500?random=5" alt="Random Image 5">
+                <div class="caption">Forest Path</div>
+            </a>
+        </div>
+        <div class="gallery-item">
+            <a href="https://example.com/image6">
+                <img src="https://picsum.photos/500/500?random=6" alt="Random Image 6">
+                <div class="caption">Desert Dunes</div>
+            </a>
+        </div>
+        <div class="gallery-item">
+            <a href="https://example.com/image7">
+                <img src="https://picsum.photos/500/500?random=7" alt="Random Image 7">
+                <div class="caption">Snowy Peaks</div>
+            </a>
+        </div>
+        <div class="gallery-item">
+            <a href="https://example.com/image8">
+                <img src="https://picsum.photos/500/500?random=8" alt="Random Image 8">
+                <div class="caption">Tropical Beach</div>
+            </a>
+        </div>
+        <div class="gallery-item">
+            <a href="https://example.com/image9">
+                <img src="https://picsum.photos/500/500?random=9" alt="Random Image 9">
+                <div class="caption">Autumn Colors</div>
+            </a>
+        </div>
+        <div class="gallery-item">
+            <a href="https://example.com/image10">
+                <img src="https://picsum.photos/500/500?random=10" alt="Random Image 10">
+                <div class="caption">Urban Architecture</div>
+            </a>
+        </div>
+        <div class="gallery-item">
+            <a href="https://example.com/image11">
+                <img src="https://picsum.photos/500/500?random=11" alt="Random Image 11">
+                <div class="caption">Countryside Farm</div>
+            </a>
+        </div>
+        <div class="gallery-item">
+            <a href="https://example.com/image12">
+                <img src="https://picsum.photos/500/500?random=12" alt="Random Image 12">
+                <div class="caption">Waterfall</div>
+            </a>
+        </div>
+        <div class="gallery-item">
+            <a href="https://example.com/image13">
+                <img src="https://picsum.photos/500/500?random=13" alt="Random Image 13">
+                <div class="caption">Ancient Ruins</div>
+            </a>
+        </div>
+        <div class="gallery-item">
+            <a href="https://example.com/image14">
+                <img src="https://picsum.photos/500/500?random=14" alt="Random Image 14">
+                <div class="caption">Northern Lights</div>
+            </a>
+        </div>
+        <div class="gallery-item">
+            <a href="https://example.com/image15">
+                <img src="https://picsum.photos/500/500?random=15" alt="Random Image 15">
+                <div class="caption">Colorful Market</div>
+            </a>
+        </div>
+        <div class="gallery-item">
+            <a href="https://example.com/image16">
+                <img src="https://picsum.photos/500/500?random=16" alt="Random Image 16">
+                <div class="caption">Starry Night Sky</div>
+            </a>
+        </div>
+        <div class="gallery-item">
+            <a href="https://example.com/image17">
+                <img src="https://picsum.photos/500/500?random=17" alt="Random Image 17">
+                <div class="caption">Foggy Morning</div>
+            </a>
+        </div>
+        <div class="gallery-item">
+            <a href="https://example.com/image18">
+                <img src="https://picsum.photos/500/500?random=18" alt="Random Image 18">
+                <div class="caption">Coral Reef</div>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
